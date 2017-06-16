@@ -24,7 +24,7 @@ describe('Compute Bearing', function() {
   it('Negative value for bearing greater than / equal to 180', function(done) {
     var latlng1 = L.latLng([33.0, -120.0]),
         latlng2 = L.latLng([34.0, -122.0]);
-    assert.equal(-58.503883697887375, L.GeometryUtil.bearing(latlng1,latlng2));
+    assert.almostEqual(-58.503883697887375, L.GeometryUtil.bearing(latlng1,latlng2), 12);
     done();
   });
 
